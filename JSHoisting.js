@@ -4,7 +4,7 @@ var hello = 'world';
 
 // 2
 var needle = 'haystack';
-test() // break
+test() // magnet
 function test() {
     var needle = 'magnet';
     console.log(needle);
@@ -14,14 +14,14 @@ function test() {
 var brendan = 'super cool';
 function print() {
     brendan = 'only okay';
-    console.log(brendan); // only okay
+    console.log(brendan);
 }
-console.log(brendan); // only okay
+console.log(brendan); // super cool
 
 // 4
 var food = 'chicken';
 console.log(food); // chicken
-eat() // break
+eat() // half-chicken
 function eat() {
     food='half-chicken';
     console.log(food);
@@ -29,7 +29,7 @@ function eat() {
 }
 
 // 5
-mean(); // break
+mean(); // break - typeError mean is not a function
 console.log(food);
 var mean = function() {
     food = 'chicken';
@@ -53,20 +53,20 @@ console.log(genre); // disco
 // 7
 dojo = 'san jose';
 console.log(dojo); // san jose
-learn(); // break
+learn();
 function learn() {
     dojo = 'seattle';
-    console.log(dojo)
+    console.log(dojo) // seattle
     var dojo = 'burbank';
-    console.log(dojo);
+    console.log(dojo); // burbank
 }
-console.log(dojo);
+console.log(dojo); // san jose
 
 // 8
 console.log(makeDojo("chicago", 65));
 // {'name': 'chicago', 'students': 65, 'hiring': true}
 console.log(makeDojo('Berkeley', 0));
-// {'name': 'Berkeley', 'students': 0, 'hiring': false}
+// typeError because const dojo is an object canNOT change to dojo = "closed for now"
 
 function makeDojo(name, students) {
     const dojo = {};
